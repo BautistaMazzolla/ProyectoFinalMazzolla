@@ -51,33 +51,45 @@ const productos= [
     }
 ];
 
-let container_sanlorenzo = document.getElementById("container_sanlorenzo") 
+let cartproducts = []
 
-function renderproductos (productosArray) {
-    productosArray.forEach(productos => {
-        const card  = document.createElement("div")
+let container_sanlorenzo = document.getElementById("container_sanlorenzo")
+
+function renderproductos(productosArray){
+    productosArray.forEach(producto => {
+
+        const card = document.createElement("div")
 
         card.innerHTML = `
-<h3>${productos.nombre}</h3>
-<h4>${productos.precio}</h4>
-<button class="productoAgregar" id="${productos.id}">Agregar</button>
-`
+        <h3>${producto.nombre}</h3>
+        <h4>${producto.precio}</h4>
+        <button class="productoAgregar" id="${producto.id}">Agregar</button>
+        `
 
         container_sanlorenzo.appendChild(card)
-    });
+    })
 }
-    renderproductos(productos)
 
-    function agregaralcarrito () {
-        Addbutton = document.querySelectorAll (".agregarproducto")
-        Addbutton.forEach(button => {
-            button.onclick = (e) => {
-                const productid = e.currentTarget.id
-                const selectedproduct = productos.find(producto => producto.id == productid)
-                cartproducts.push(selectedproduct)
+renderproductos(productos)
 
-                localStorage.setItem("cartproducts", cartproducts)
-                console.log(cartproducts)
-            }
-        })
-    }productos
+function agregaralcarrito(){
+    const Addbutton = document.querySelectorAll(".productoAgregar")
+
+    Addbutton.forEach(button=>{
+        button.onclick = (e)=>{
+            const productid = e.currentTarget.id
+
+            const selectedproduct = productos.find(
+                producto => producto.id == productid
+            )
+
+            cartproducts.push(selectedproduct)
+
+            localStorage.setItem("cartproducts", JSON.stringify(cartproducts))
+
+            console.log(cartproducts)
+        }
+    })
+}
+
+agregaralcarrito()
