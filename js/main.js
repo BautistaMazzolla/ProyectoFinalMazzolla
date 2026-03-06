@@ -1,53 +1,52 @@
 // Productos
 const productos= [
     { 
-    
     id: 1,
     nombre: "remera local titular",
-    precio: 40.000,
-
+    precio: 40000,
+    img: "../assets/img/remera_titular.webp"
     },
 
     {
     id: 2,
     nombre: "remera visitante suplente",
-    precio: 35.000,
+    precio: 35000,
+    img: "../assets/img/remerasuplente.webp"
     },
     
     {
     id: 3,
     nombre: "short de futbol local",
-    precio: 20.000
+    precio: 20000,
+    img: "../assets/img/shortazul.webp"
     },
 
     {
     id: 4,
     nombre: "short de futbol visitante",
-    precio: 20.000,
+    precio: 20000,
+    img: "../assets/img/shortblanco.webp"
     },
 
     {
     id: 5,
     nombre: "buzo de entrenamiento con cierre",
-    precio: 30.000,
+    precio: 30000,
+    img: "../assets/img/buzoconcierre.jfif"
     },
 
     {
     id: 6,
     nombre: "buzo de entrenamiento con capucha",
-    precio: 25.000,
+    precio: 25000,
+    img: "../assets/img/buzoconcapucha.jfif"
     },
     
     {
     id: 7,
-    nombre: "buzo de entrenamiento con capucha",
-    precio: 25.000,
-    },
-
-    {
-    id: 8,
     nombre: "medias largas blancas",
-    precio: 25.000
+    precio: 25000,
+    img: "../assets/img/mediasblancas.webp"
     }
 ];
 
@@ -61,9 +60,11 @@ function renderproductos(productosArray){
         const card = document.createElement("div")
 
         card.innerHTML = `
+        <img src="${producto.img}" width="150">
         <h3>${producto.nombre}</h3>
         <h4>${producto.precio}</h4>
         <button class="productoAgregar" id="${producto.id}">Agregar</button>
+
         `
 
         container_sanlorenzo.appendChild(card)
