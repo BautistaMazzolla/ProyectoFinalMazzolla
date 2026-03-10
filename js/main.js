@@ -2,51 +2,65 @@
 const productos= [
     { 
     id: 1,
-    nombre: "remera local titular",
+    nombre: "Camiseta Titular San Lorenzo de Almagro ",
     precio: 40000,
     img: "../assets/img/remera_titular.webp"
     },
 
     {
     id: 2,
-    nombre: "remera visitante suplente",
+    nombre: "Camiseta Suplente San Lorenzo de Almagro",
     precio: 35000,
     img: "../assets/img/remerasuplente.webp"
     },
     
     {
     id: 3,
-    nombre: "short de futbol local",
+    nombre: "Short Titular San Lorenzo de Almagro ",
     precio: 20000,
     img: "../assets/img/shortazul.webp"
     },
 
     {
     id: 4,
-    nombre: "short de futbol visitante",
+    nombre: "Short Suplente San Lorenzo de Almagro ",
     precio: 20000,
     img: "../assets/img/shortblanco.webp"
     },
 
     {
     id: 5,
-    nombre: "buzo de entrenamiento con cierre",
+    nombre: "Buzo De Entrenamiento San Lorenzo de Almagro",
     precio: 30000,
     img: "../assets/img/buzoconcierre.jfif"
     },
 
     {
     id: 6,
-    nombre: "buzo de entrenamiento con capucha",
+    nombre: "Campera Con Capucha San Lorenzo de Almagro",
     precio: 25000,
     img: "../assets/img/buzoconcapucha.jfif"
     },
     
     {
     id: 7,
-    nombre: "medias largas blancas",
+    nombre: "Medias Alternativa San Lorenzo de Almagro ",
     precio: 25000,
     img: "../assets/img/mediasblancas.webp"
+    },
+
+    {
+    id: 8,
+    nombre: "Musculosa Entrenamiento San Lorenzo de Almagro ",
+    precio: 25000,
+    img: "../assets/img/musculosa.webp"
+    },
+
+    {
+    id: 9,
+    nombre: "Pantalón Largo San Lorenzo de Almagro",
+    precio: 25000,
+    img: "../assets/img/pantalonlargo.webp"
     }
 ];
 
