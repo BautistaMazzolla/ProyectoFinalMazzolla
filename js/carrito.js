@@ -79,3 +79,23 @@ vaciarBtn.onclick = () => {
 }
 
 cartsection.appendChild(vaciarBtn)
+
+let comprarBtn = document.createElement("button")
+comprarBtn.innerText = "Finalizar compra"
+
+comprarBtn.onclick = () => {
+
+Swal.fire({
+  title: "¡Compra realizada!",
+  text: "Gracias por comprar en la tienda de San Lorenzo",
+  icon: "success",
+  imageUrl: "../assets/img/compra.gif",
+  imageWidth: 400,
+  confirmButtonText: "Aceptar"
+})
+
+localStorage.removeItem("cartproducts")
+
+}
+
+cartsection.appendChild(comprarBtn)
