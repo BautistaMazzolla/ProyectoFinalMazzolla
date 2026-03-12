@@ -5,24 +5,19 @@ let cartproducts = JSON.parse(cartstorage)
 let cartsection = document.getElementById("productoscarrito")
 
 function rendercarrito(cartitems){
-
     cartitems.forEach(producto=>{
-
     const card = document.createElement("div")
-
     card.innerHTML = `
     <div class="cart-card">
         <img src="${producto.img}" width="80">
         <div class="cart-info">
             <h3>${producto.nombre}</h3>
-            <h4>$${producto.precio}</h4>
+            <h4>${$producto.precio}</h4>
             <button class="eliminar" data-id="${producto.id}">Eliminar</button>
         </div>
     </div>
     `
-
     cartsection.appendChild(card)
-
 })
 }
 
